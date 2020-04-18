@@ -1,0 +1,56 @@
+%-----------------------------------------------%
+% Packages arranged by : Tsz Timmy Chan	        %
+%                 Date : Apr 17th, 2020	        %
+%	See ICLSpreamble.sty for details	        %
+%	Uses biblatex-apa package for references    %
+%-----------------------------------------------%
+% File hosted on Overleaf and synced with Github
+
+\documentclass{ICLSarticle}
+\usepackage{ICLSpreamble}
+
+\ICLStitle{Title: Style "Title," Arial, 14 pt., Bold, Centered}
+% Work Title Here.
+
+% YOUR NAME(S) HERE 
+\author{Author Name, Institution, Email \and Author Name 2, Institution, Email%
+
+(if same institution, put all authors separated by commas, Institution,
+
+then put on new line "Email: email 1, email 2, email 3" in order of authorship)
+\vspace{-10ex}} %removes spacing after authors
+
+
+\addbibresource{library.bib}		% Reference file, NO SPACES in the name
+
+
+% CUSTOM PACKAGES GO HERE %
+%\usepackage{LSRIcommon}
+% CUSTOM PACKAGES GO HERE %
+
+\begin{document}
+
+%====ABSTRACT AND KEYWORDS====%
+\maketitle
+\begin{ICLSabstract}
+	\input{abstract} % This template includes standalone package so this works nicely
+\end{ICLSabstract}
+%	\ICLSkeywords{maximum five keywords should be included}
+
+
+
+
+%====MAIN TEXT BELOW====%
+\input{paper_contents} % inputs paper_content.tex
+
+
+\printbibliography[title={References (use Heading 1)}]
+
+
+(Note that references are in style “References,” Times or Times New Roman 10 pt text, "full justified" and use a .5 inch "hanging" indent, with no spaces left between entries. Follow APA style. The MOST important thing about the reference style you use is that readers be able to locate the sources you cite! Please be especially clear in the case of references to on-line materials!)
+
+\section{Acknowledgments (use Heading 1)}
+
+If you would like to make acknowledgments in your paper, please do so after the reference section, use Times or Times New Roman 10 pt font, "full justify" your text, and do not indent the first line of the acknowledgments.
+
+\end{document}
