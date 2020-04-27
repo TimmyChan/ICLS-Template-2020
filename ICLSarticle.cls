@@ -6,8 +6,8 @@
 % Date             		: Mar, 2020			%
 %-------------------------------------------%
 
-\LoadClass[10pt,a4paper]{article}
-\setlength\parindent{.5in}
+\LoadClass[10pt,a4paper]{article}   % A4 paper and 10 pt font
+\setlength\parindent{.5in}          % Indents are 0.5 inches
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
@@ -48,9 +48,9 @@
 }
 
 %===FORMATTING SECTIONS/TITLES===%
-\usepackage[explicit]{titlesec}
-\usepackage{titling}
-\usepackage[scaled]{helvet}
+\usepackage[explicit]{titlesec} % package for customization of headings
+\usepackage{titling}            % modify \maketitle command
+\usepackage[scaled]{helvet}     % Standard replacement for times new roman font
 
 %make title 14 pt Helvetica 
 \renewcommand{\maketitlehooka}{\normalfont\sffamily\Large\bfseries}
@@ -58,8 +58,8 @@
 %change behavior of \and for authors
 \renewcommand{\and}{\unskip\\}
 \posttitle{\par\end{center}}
-% 60 pt = 2.116582cm
-% \droptitle = 3cm -60pt = 1.116582cm
+
+%TODO: Does this need adjustment?
 \setlength{\droptitle}{-1.5cm}
 
 
@@ -92,11 +92,12 @@
 
 
 %	enumerate environment
-
 \RequirePackage[shortlabels]{enumitem}	% Additional customization of lists	
 % Make lists spacing consistent	spacing
 \setlist{itemsep=3pt}
 
+% Defining captions as it appears in the word template.
+% TODO: Should there be consistency? What should be underlined? 
 \usepackage{caption}
 \DeclareCaptionFormat{underlcap}{#1#2#3\par}
 \DeclareCaptionLabelFormat{underlcap}{\uline{#1~#2}}
